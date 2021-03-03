@@ -16,7 +16,8 @@ export const HeroScreen = ({history}) => {
         publisher,
         alter_ego,
         first_appearance,
-        characters
+        characters,
+        link
     } = hero;
 
     const handleReturn = () => {
@@ -29,12 +30,14 @@ export const HeroScreen = ({history}) => {
         }
     }
 
+    console.log(`..assets/heroes/${heroeId}.jpg`);
+
 
     return (
         <div className="row mt-5">
             <div className="col-4 animate__animated animate__fadeInLeft">
                 <img
-                    src={`../assets/heroes/${heroeId}.jpg`}
+                    src={link}
                     alt={superhero}
                     className="img-thumbnail"
                 />
